@@ -33,7 +33,7 @@ Létrehoz egy people táblát, amiből a lényeges a first_name, last_name és a
 
             return getString(stmt);
         } catch (SQLException sqle) {
-            throw new IllegalArgumentException("Error by select", sqle);
+            throw new IllegalArgumentException("Cannot connect", sqle);
         }
 
     }
@@ -48,7 +48,7 @@ Létrehoz egy people táblát, amiből a lényeges a first_name, last_name és a
             }
             throw new IllegalArgumentException("No result");
         } catch (SQLException sqle) {
-            throw new IllegalArgumentException("Cannot select", sqle);
+            throw new IllegalArgumentException("Cannot find", sqle);
         }
     }
 }
